@@ -1,0 +1,24 @@
+<div class="my-5 mx-5">
+    <div class="card">
+        <div class="card-header">
+            <h3>Curso: {{course.name}}</h3>
+        </div>
+        <div class="card-body">
+            <h4>Estudiantes</h4>
+            <table class="table table-striped my-1">
+                <thead>
+                    <th>Estudiante</th>
+                    <th>Cédula</th>
+                </thead>
+                <tbody>
+                    @for (item of course.students; track $index) {
+                    <tr>
+                        <td>{{item.name}} {{item.surname}}</td>
+                        <td>{{item.identification}}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
